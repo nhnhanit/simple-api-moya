@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleApi_Moya" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simple Api With Moya" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZX-XR-ZjP">
+                                <rect key="frame" x="124" y="94" width="166" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lLF-tO-jPh">
+                                <rect key="frame" x="82" y="214.5" width="250" height="400"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TnZ-qx-HoX">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ctv-Vv-hbe"/>
+                                            <constraint firstAttribute="width" constant="250" id="sOl-4r-2WO"/>
+                                        </constraints>
+                                        <state key="normal" title="Get users"/>
+                                        <connections>
+                                            <action selector="getUsersDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aZT-1G-RbB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RX4-cl-cog">
+                                        <rect key="frame" x="0.0" y="70" width="101" height="50"/>
+                                        <state key="normal" title="Get detail user"/>
+                                        <connections>
+                                            <action selector="getDetailUserDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="09d-CW-zAE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ht8-W9-cVH">
+                                        <rect key="frame" x="0.0" y="140" width="147" height="50"/>
+                                        <state key="normal" title="Post register account"/>
+                                        <connections>
+                                            <action selector="postRegisterDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XZj-Jj-8o0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUR-hQ-CBv">
+                                        <rect key="frame" x="0.0" y="210" width="127" height="50"/>
+                                        <state key="normal" title="Post login account"/>
+                                        <connections>
+                                            <action selector="postLoginDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IbU-yY-36t"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6BX-u4-iTe">
+                                        <rect key="frame" x="0.0" y="280" width="114" height="50"/>
+                                        <state key="normal" title="Update user info"/>
+                                        <connections>
+                                            <action selector="podUpdateUserInfoDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m6h-kh-Qs5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZc-Fz-56I">
+                                        <rect key="frame" x="0.0" y="350" width="79" height="50"/>
+                                        <state key="normal" title="Delete user"/>
+                                        <connections>
+                                            <action selector="deleteUserDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KAu-WB-YkG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lLF-tO-jPh" firstAttribute="centerX" secondItem="mZX-XR-ZjP" secondAttribute="centerX" id="0n5-WZ-Jt5"/>
+                            <constraint firstItem="lLF-tO-jPh" firstAttribute="top" secondItem="mZX-XR-ZjP" secondAttribute="bottom" constant="100" id="POI-Yj-BAp"/>
+                            <constraint firstItem="mZX-XR-ZjP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="oAE-zX-OEy"/>
+                            <constraint firstItem="mZX-XR-ZjP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vOo-jg-6po"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="107" y="104"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

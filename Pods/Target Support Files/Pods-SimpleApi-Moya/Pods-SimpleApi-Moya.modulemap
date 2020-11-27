@@ -1,0 +1,6 @@
+framework module Pods_SimpleApi_Moya {
+  umbrella header "Pods-SimpleApi-Moya-umbrella.h"
+
+  export *
+  module * { export * }
+}
