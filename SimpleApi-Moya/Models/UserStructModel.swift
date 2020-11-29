@@ -30,43 +30,21 @@
  },
  */
 import Foundation
-
+//{"id":1,"name":"cerulean","year":2000,"color":"#98B2D1","pantone_value":"15-4020"
+//{"data":{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"}}
 struct UserStructModel: Codable {
     let id: Int
     let name: String?
-    let username: String?
+    let year: Int?
+    let color: String?
+    let pantone_value: String?
     let email: String?
-    let address: Address
-    let phone: String?
-    let website: String?
-    let company: Company
-    let acb: String? // prints:  abc nil
-//    let acb: String // prints:  Swift.DecodingError.keyNotFound(CodingKeys(stringValue: "acb", intValue: nil)
+    let first_name: String?
+    let last_name: String?
+    let avatar: String?
 }
-
 extension UserStructModel: CustomDebugStringConvertible {
     var debugDescription: String {
-        return "<User ID:\(id)> \n \(name ?? "") with \n username \(username ?? "") \n addresscity \(address.city ?? "") \n companyname \(company.name ?? "") \n abc \(acb ?? "")"
-    }
-}
-extension UserStructModel {
-    struct Address: Codable {
-        let street: String?
-        let suite: String?
-        let city: String?
-        let zipcode: String?
-        let geo: Geo
-    }
-    
-    struct Geo: Codable {
-        let lat: String?
-        let lng: String
-    }
-}
-extension UserStructModel {
-    struct Company: Codable {
-        let name: String?
-        let catchPhrase: String?
-        let bs: String?
+        return "<User ID:\(id)> \n \(name ?? ""))"
     }
 }

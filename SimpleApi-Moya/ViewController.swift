@@ -6,11 +6,11 @@
 //
 
 import UIKit
+import Moya
 
 class ViewController: UIViewController {
 
-    
-    let provider = NetworkManager()
+    let provider = MoyaProvider<MyServiceApi>(plugins: [NetworkLoggerPlugin(configuration: NetworkLoggerPlugin.Configuration(logOptions: .verbose))])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,19 +22,38 @@ class ViewController: UIViewController {
 
     //MARK: - User Api
     @IBAction func getUsersDidTap(_ sender: Any) {
-        provider.getUsers { (users) in
-            print("usercount=", users.count)
-            print("usercount=", users[0])
+        provider.request(.users(page: 2)) { result in
+            switch result {
+            case let .success(response):
+                do {
+                    let results = try response.map(ResponseUsers<UserStructModel>.self).data
+                    
+                    print("usercount=", results.count)
+                    print("user0=", results[0])
+                } catch let err {
+                    print(err)
+                }
+            case let .failure(error):
+                print(error)
+            }
         }
     }
     
     @IBAction func getDetailUserDidTap(_ sender: Any) {
-        provider.getDetailUser(id: 1) { (detailUser) in
-            
-            print("detailuser=", detailUser.debugDescription)
-            
-            //print("formatToJsonString", detailUser.formatToJsonString(options: .sortedKeys))
-            print("formatToJsonString", detailUser.formatToJsonString(options: .prettyPrinted))
+        provider.request(.detailUser(id: 2)) { result in
+            switch result {
+            case let .success(response):
+                do {
+                    let result = try response.map(ResponseUser<UserStructModel>.self).data
+
+                    print("userdetailid=", result.id)
+                    print(result.formatToJsonString(options: .prettyPrinted))
+                } catch let err {
+                    print(err)
+                }
+            case let .failure(error):
+                print(error)
+            }
         }
     }
     

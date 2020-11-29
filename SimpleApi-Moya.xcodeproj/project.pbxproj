@@ -14,9 +14,9 @@
 		47C6A156257098E20002C5E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47C6A155257098E20002C5E8 /* Assets.xcassets */; };
 		47C6A159257098E20002C5E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47C6A157257098E20002C5E8 /* LaunchScreen.storyboard */; };
 		47C6A1692570A4250002C5E8 /* UserStructModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C6A1682570A4250002C5E8 /* UserStructModel.swift */; };
-		47C6A16C2570A6F20002C5E8 /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C6A16B2570A6F20002C5E8 /* UserApi.swift */; };
-		47C6A1722570AA8A0002C5E8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C6A1712570AA8A0002C5E8 /* NetworkManager.swift */; };
+		47C6A16C2570A6F20002C5E8 /* MyServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C6A16B2570A6F20002C5E8 /* MyServiceApi.swift */; };
 		47C6A1762570B99A0002C5E8 /* Decodable+Etx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C6A1752570B99A0002C5E8 /* Decodable+Etx.swift */; };
+		47DDB8812572B656002D8BE2 /* CodableResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DDB8802572B656002D8BE2 /* CodableResponses.swift */; };
 		901AA552150307D093D2C69C /* Pods_SimpleApi_Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D16D34F801DBA7B760C351A7 /* Pods_SimpleApi_Moya.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,9 +30,9 @@
 		47C6A158257098E20002C5E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47C6A15A257098E20002C5E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47C6A1682570A4250002C5E8 /* UserStructModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStructModel.swift; sourceTree = "<group>"; };
-		47C6A16B2570A6F20002C5E8 /* UserApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
-		47C6A1712570AA8A0002C5E8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		47C6A16B2570A6F20002C5E8 /* MyServiceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyServiceApi.swift; sourceTree = "<group>"; };
 		47C6A1752570B99A0002C5E8 /* Decodable+Etx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+Etx.swift"; sourceTree = "<group>"; };
+		47DDB8802572B656002D8BE2 /* CodableResponses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableResponses.swift; sourceTree = "<group>"; };
 		C21024F276A85671EBE1D51D /* Pods-SimpleApi-Moya.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleApi-Moya.debug.xcconfig"; path = "Target Support Files/Pods-SimpleApi-Moya/Pods-SimpleApi-Moya.debug.xcconfig"; sourceTree = "<group>"; };
 		CE3AF7E6DA8445BD2500CBBE /* Pods-SimpleApi-Moya.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleApi-Moya.release.xcconfig"; path = "Target Support Files/Pods-SimpleApi-Moya/Pods-SimpleApi-Moya.release.xcconfig"; sourceTree = "<group>"; };
 		D16D34F801DBA7B760C351A7 /* Pods_SimpleApi_Moya.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleApi_Moya.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,9 +73,9 @@
 			children = (
 				47C6A1622570990C0002C5E8 /* Networking */,
 				47C6A161257098F60002C5E8 /* Models */,
+				47C6A150257098E00002C5E8 /* ViewController.swift */,
 				47C6A14C257098E00002C5E8 /* AppDelegate.swift */,
 				47C6A14E257098E00002C5E8 /* SceneDelegate.swift */,
-				47C6A150257098E00002C5E8 /* ViewController.swift */,
 				47C6A152257098E00002C5E8 /* Main.storyboard */,
 				47C6A155257098E20002C5E8 /* Assets.xcassets */,
 				47C6A157257098E20002C5E8 /* LaunchScreen.storyboard */,
@@ -96,8 +96,8 @@
 		47C6A1622570990C0002C5E8 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				47C6A16B2570A6F20002C5E8 /* UserApi.swift */,
-				47C6A1712570AA8A0002C5E8 /* NetworkManager.swift */,
+				47C6A16B2570A6F20002C5E8 /* MyServiceApi.swift */,
+				47DDB8802572B656002D8BE2 /* CodableResponses.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -234,10 +234,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				47C6A151257098E00002C5E8 /* ViewController.swift in Sources */,
-				47C6A16C2570A6F20002C5E8 /* UserApi.swift in Sources */,
+				47C6A16C2570A6F20002C5E8 /* MyServiceApi.swift in Sources */,
 				47C6A1762570B99A0002C5E8 /* Decodable+Etx.swift in Sources */,
-				47C6A1722570AA8A0002C5E8 /* NetworkManager.swift in Sources */,
 				47C6A1692570A4250002C5E8 /* UserStructModel.swift in Sources */,
+				47DDB8812572B656002D8BE2 /* CodableResponses.swift in Sources */,
 				47C6A14D257098E00002C5E8 /* AppDelegate.swift in Sources */,
 				47C6A14F257098E00002C5E8 /* SceneDelegate.swift in Sources */,
 			);

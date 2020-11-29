@@ -10,20 +10,22 @@
 import Foundation
 import Moya
 
-enum UserApi {
-    case users
-    case detailUser(id:Int)
+enum MyServiceApi {
+    case users(page: Int)
+    case detailUser(id: Int)
 }
-extension UserApi: TargetType {
+extension MyServiceApi: TargetType {
     var baseURL: URL {
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com/") else { fatalError("baseURL could not be configured.")}
+        guard let url = URL(string: "https://reqres.in/api/") else {
+            fatalError("baseURL could not be configured.")
+        }
         return url
     }
     
     var path: String {
         switch self {
-        case .users:
-            return "users"
+        case .users(let page):
+            return "users?page=\(page)"
         case .detailUser(let id):
             return "users/\(id)"
         }
