@@ -23,7 +23,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lLF-tO-jPh">
-                                <rect key="frame" x="82" y="214.5" width="250" height="400"/>
+                                <rect key="frame" x="82" y="214.5" width="250" height="470"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TnZ-qx-HoX">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
@@ -69,6 +69,13 @@
                                         <state key="normal" title="Delete user"/>
                                         <connections>
                                             <action selector="deleteUserDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KAu-WB-YkG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9t-hb-hNU">
+                                        <rect key="frame" x="0.0" y="420" width="95" height="50"/>
+                                        <state key="normal" title="Upload Image"/>
+                                        <connections>
+                                            <action selector="uploadButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QQe-y9-eBR"/>
                                         </connections>
                                     </button>
                                 </subviews>
