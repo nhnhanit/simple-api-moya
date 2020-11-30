@@ -48,6 +48,9 @@ class ViewController: UIViewController {
 
                     print("userdetailid=", result.id)
                     print(result.formatToJsonString(options: .prettyPrinted))
+                    
+                    print(result.fullName)
+                    
                 } catch let err {
                     print(err)
                 }
@@ -58,15 +61,94 @@ class ViewController: UIViewController {
     }
     
     @IBAction func postRegisterDidTap(_ sender: Any) {
+        let regis = RegisterStructModel(email: "abc@gmail.com", password: "qwerty1")
+        
+        provider.request(.register(registerModelToDictionary: regis.formatToJsonDictionary())) { result in
+            //print("\(result)")
+            switch result {
+            case let .success(response):
+                do {
+                    if let json = try JSONSerialization.jsonObject(with: response.data, options: []) as? [String: Any] {
+                            print("responejsonObject=", json)
+                        }
+                    
+                } catch let err {
+                    print(err)
+                }
+            case let .failure(error):
+                print(error)
+            }
+        }
     }
     
     @IBAction func postLoginDidTap(_ sender: Any) {
+        
+        // Note: can test with api:
+//        guard let url = URL(string: "https://123xyz/api/v1/") else {
+//            fatalError("baseURL could not be configured.")
+//        }
+        
+        let loginInfo = ["email": "eve.holt@reqres.in", "password": "cityslicka"]
+        
+        provider.request(.login(loginModelToDictionary: loginInfo)) { result in
+            //print("\(result)")
+            switch result {
+            case let .success(response):
+                do {
+                    if let json = try JSONSerialization.jsonObject(with: response.data, options: []) as? [String: Any] {
+                            print("responejsonObject=", json)
+                        }
+                    
+                } catch let err {
+                    print(err)
+                }
+            case let .failure(error):
+                print(error)
+            }
+        }
     }
     
     @IBAction func podUpdateUserInfoDidTap(_ sender: Any) {
+        
+        let infoNeedUpdateDic = ["name": "acb", "job": "developer"]
+        
+        provider.request(.updateUser(userId: 2, infoNeedUpdateToDictionary: infoNeedUpdateDic)) { result in
+            //print("\(result)")
+            switch result {
+            case let .success(response):
+                do {
+                    if let json = try JSONSerialization.jsonObject(with: response.data, options: []) as? [String: Any] {
+                            print("responejsonObject=", json)
+                        }
+                    
+                } catch let err {
+                    print(err)
+                }
+            case let .failure(error):
+                print(error)
+            }
+        }
+        
     }
     
     @IBAction func deleteUserDidTap(_ sender: Any) {
+        provider.request(.deleteUser(userId: 2)) { result in
+            //print("\(result)")
+            switch result {
+            case let .success(response):
+                do {
+                    // status code 204, response empty
+                    if let json = try JSONSerialization.jsonObject(with: response.data, options: []) as? [String: Any] {
+                        print("responejsonObject=", json)
+                    }
+                    
+                } catch let err {
+                    print(err)
+                }
+            case let .failure(error):
+                print(error)
+            }
+        }
     }
     
 }

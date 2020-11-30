@@ -3,4 +3,54 @@
    uuid = "21562FD8-3157-4F24-8E07-13DA163C52BA"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1E449A8D-2E86-4AD3-898D-D337695EA3A0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SimpleApi-Moya/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "deleteUserDidTap(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1E449A8D-2E86-4AD3-898D-D337695EA3A0 - 9cc48320ad4dcb73"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in SimpleApi_Moya.ViewController.deleteUserDidTap(Any) -&gt; ()"
+                  moduleName = "SimpleApi-Moya"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/DATA2/iOSTechnicalDemo/SimpleApi-Moya/SimpleApi-Moya/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "274">
+               </Location>
+               <Location
+                  uuid = "1E449A8D-2E86-4AD3-898D-D337695EA3A0 - 9cc48320ad4dcb73"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in SimpleApi_Moya.ViewController.deleteUserDidTap(Any) -&gt; ()"
+                  moduleName = "SimpleApi-Moya"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/DATA2/iOSTechnicalDemo/SimpleApi-Moya/SimpleApi-Moya/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "328">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47568A62257398A800084894 /* RegisterStructModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47568A61257398A800084894 /* RegisterStructModel.swift */; };
+		47568A6C2574852000084894 /* LoginStructModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47568A6B2574851F00084894 /* LoginStructModel.swift */; };
 		47C6A14D257098E00002C5E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C6A14C257098E00002C5E8 /* AppDelegate.swift */; };
 		47C6A14F257098E00002C5E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C6A14E257098E00002C5E8 /* SceneDelegate.swift */; };
 		47C6A151257098E00002C5E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C6A150257098E00002C5E8 /* ViewController.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47568A61257398A800084894 /* RegisterStructModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterStructModel.swift; sourceTree = "<group>"; };
+		47568A6B2574851F00084894 /* LoginStructModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStructModel.swift; sourceTree = "<group>"; };
 		47C6A149257098E00002C5E8 /* SimpleApi-Moya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SimpleApi-Moya.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47C6A14C257098E00002C5E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47C6A14E257098E00002C5E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,9 +78,9 @@
 				47C6A1622570990C0002C5E8 /* Networking */,
 				47C6A161257098F60002C5E8 /* Models */,
 				47C6A150257098E00002C5E8 /* ViewController.swift */,
+				47C6A152257098E00002C5E8 /* Main.storyboard */,
 				47C6A14C257098E00002C5E8 /* AppDelegate.swift */,
 				47C6A14E257098E00002C5E8 /* SceneDelegate.swift */,
-				47C6A152257098E00002C5E8 /* Main.storyboard */,
 				47C6A155257098E20002C5E8 /* Assets.xcassets */,
 				47C6A157257098E20002C5E8 /* LaunchScreen.storyboard */,
 				47C6A15A257098E20002C5E8 /* Info.plist */,
@@ -87,6 +91,8 @@
 		47C6A161257098F60002C5E8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				47568A6B2574851F00084894 /* LoginStructModel.swift */,
+				47568A61257398A800084894 /* RegisterStructModel.swift */,
 				47C6A1682570A4250002C5E8 /* UserStructModel.swift */,
 				47C6A1752570B99A0002C5E8 /* Decodable+Etx.swift */,
 			);
@@ -237,9 +243,11 @@
 				47C6A16C2570A6F20002C5E8 /* MyServiceApi.swift in Sources */,
 				47C6A1762570B99A0002C5E8 /* Decodable+Etx.swift in Sources */,
 				47C6A1692570A4250002C5E8 /* UserStructModel.swift in Sources */,
+				47568A6C2574852000084894 /* LoginStructModel.swift in Sources */,
 				47DDB8812572B656002D8BE2 /* CodableResponses.swift in Sources */,
 				47C6A14D257098E00002C5E8 /* AppDelegate.swift in Sources */,
 				47C6A14F257098E00002C5E8 /* SceneDelegate.swift in Sources */,
+				47568A62257398A800084894 /* RegisterStructModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
