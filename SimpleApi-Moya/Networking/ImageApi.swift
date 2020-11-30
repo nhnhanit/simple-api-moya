@@ -8,12 +8,14 @@
 import Foundation
 import Moya
 
+let imageProvider = MoyaProvider<ImageApi>(plugins: [NetworkLoggerPlugin(configuration: NetworkLoggerPlugin.Configuration(logOptions: .verbose))])
+
 enum ImageApi {
     case upload(imageData: Data)
 }
 extension ImageApi: TargetType {
     var baseURL: URL {
-        guard let url = URL(string: "http://acb") else {
+        guard let url = URL(string: "http://sample.com") else {
             fatalError("baseURL could not be configured.")
         }
         

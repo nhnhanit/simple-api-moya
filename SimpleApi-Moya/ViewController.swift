@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     let provider = MoyaProvider<MyServiceApi>(plugins: [NetworkLoggerPlugin(configuration: NetworkLoggerPlugin.Configuration(logOptions: .verbose))])
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -24,8 +23,12 @@ class ViewController: UIViewController {
 
     //MARK: - User Api
     @IBAction func getUsersDidTap(_ sender: Any) {
-        let provider1 = MoyaProvider<MultiTarget>()
-        provider1.request(MultiTarget(MyServiceApi.users(page: 2))) { result in
+        
+        // MARK: - USE MUTITARGET PROVIDER
+        
+        let mutiTargetProvider = MoyaProvider<MultiTarget>()
+        
+        mutiTargetProvider.request(MultiTarget(MyServiceApi.users(page: 2))) { result in
             switch result {
             case let .success(response):
                 do {
@@ -43,7 +46,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func getDetailUserDidTap(_ sender: Any) {
-        provider.request(.detailUser(id: 2)) { result in
+        
+        // MARK: - USE BASIC TARGET PROVIDER - WAY 1
+        
+        myServiceProvider.request(.detailUser(id: 2)) { result in
             switch result {
             case let .success(response):
                 do {
@@ -64,6 +70,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func postRegisterDidTap(_ sender: Any) {
+        
+        // MARK: - USE BASIC TARGET PROVIDER - WAY 2
+        
         let regis = RegisterStructModel(email: "abc@gmail.com", password: "qwerty1")
         
         provider.request(.register(registerModelToDictionary: regis.formatToJsonDictionary())) { result in
@@ -155,15 +164,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func uploadButtonDidTap(_ sender: Any) {
-        
-        let provider2 = MoyaProvider<ImageApi>(plugins: [NetworkLoggerPlugin(configuration: NetworkLoggerPlugin.Configuration(logOptions: .verbose))])
-        
         let image = UIImage(named: "image1.png")
         guard let imageData = image?.jpegData(compressionQuality: 1.0) else {
             return
         }
         
-        provider2.request(.upload(imageData: imageData)) { result in
+        imageProvider.request(.upload(imageData: imageData)) { result in
             //print("\(result)")
             switch result {
             case let .success(response):

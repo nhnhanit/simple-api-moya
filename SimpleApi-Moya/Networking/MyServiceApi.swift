@@ -10,6 +10,8 @@
 import Foundation
 import Moya
 
+let myServiceProvider = MoyaProvider<MyServiceApi>(plugins: [NetworkLoggerPlugin(configuration: NetworkLoggerPlugin.Configuration(logOptions: .verbose))])
+
 enum MyServiceApi {
     case users(page: Int)
     case detailUser(id: Int)
