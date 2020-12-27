@@ -20,7 +20,6 @@ struct NetworkManager: Networkable {
     //let provider = MoyaProvider<UserApi>(plugins: [networkLogger])
     let provider = MoyaProvider<UserApi>()
     
-    
     func getUsers(completion: @escaping ([UserStructModel])->()){
         provider.request(.users) { result in
             switch result {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B6BCEBD258AFDC000BB1B53 /* SimpleApi_MoyaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6BCEBC258AFDC000BB1B53 /* SimpleApi_MoyaTests.swift */; };
 		47C6A14D257098E00002C5E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C6A14C257098E00002C5E8 /* AppDelegate.swift */; };
 		47C6A14F257098E00002C5E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C6A14E257098E00002C5E8 /* SceneDelegate.swift */; };
 		47C6A151257098E00002C5E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C6A150257098E00002C5E8 /* ViewController.swift */; };
@@ -20,7 +21,20 @@
 		901AA552150307D093D2C69C /* Pods_SimpleApi_Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D16D34F801DBA7B760C351A7 /* Pods_SimpleApi_Moya.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3B6BCEBF258AFDC000BB1B53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47C6A141257098E00002C5E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47C6A148257098E00002C5E8;
+			remoteInfo = "SimpleApi-Moya";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		3B6BCEBA258AFDC000BB1B53 /* SimpleApi-MoyaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SimpleApi-MoyaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B6BCEBC258AFDC000BB1B53 /* SimpleApi_MoyaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleApi_MoyaTests.swift; sourceTree = "<group>"; };
+		3B6BCEBE258AFDC000BB1B53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47C6A149257098E00002C5E8 /* SimpleApi-Moya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SimpleApi-Moya.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47C6A14C257098E00002C5E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47C6A14E257098E00002C5E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +53,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3B6BCEB7258AFDC000BB1B53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		47C6A146257098E00002C5E8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -50,10 +71,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B6BCEBB258AFDC000BB1B53 /* SimpleApi-MoyaTests */ = {
+			isa = PBXGroup;
+			children = (
+				3B6BCEBC258AFDC000BB1B53 /* SimpleApi_MoyaTests.swift */,
+				3B6BCEBE258AFDC000BB1B53 /* Info.plist */,
+			);
+			path = "SimpleApi-MoyaTests";
+			sourceTree = "<group>";
+		};
 		47C6A140257098E00002C5E8 = {
 			isa = PBXGroup;
 			children = (
 				47C6A14B257098E00002C5E8 /* SimpleApi-Moya */,
+				3B6BCEBB258AFDC000BB1B53 /* SimpleApi-MoyaTests */,
 				47C6A14A257098E00002C5E8 /* Products */,
 				DB401F992A5DFC4E473C1C2E /* Pods */,
 				EB25D763AF6E8D898A4FC1FE /* Frameworks */,
@@ -64,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				47C6A149257098E00002C5E8 /* SimpleApi-Moya.app */,
+				3B6BCEBA258AFDC000BB1B53 /* SimpleApi-MoyaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,6 +154,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3B6BCEB9258AFDC000BB1B53 /* SimpleApi-MoyaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B6BCEC3258AFDC000BB1B53 /* Build configuration list for PBXNativeTarget "SimpleApi-MoyaTests" */;
+			buildPhases = (
+				3B6BCEB6258AFDC000BB1B53 /* Sources */,
+				3B6BCEB7258AFDC000BB1B53 /* Frameworks */,
+				3B6BCEB8258AFDC000BB1B53 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B6BCEC0258AFDC000BB1B53 /* PBXTargetDependency */,
+			);
+			name = "SimpleApi-MoyaTests";
+			productName = "SimpleApi-MoyaTests";
+			productReference = 3B6BCEBA258AFDC000BB1B53 /* SimpleApi-MoyaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		47C6A148257098E00002C5E8 /* SimpleApi-Moya */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 47C6A15D257098E20002C5E8 /* Build configuration list for PBXNativeTarget "SimpleApi-Moya" */;
@@ -150,6 +200,10 @@
 				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
+					3B6BCEB9258AFDC000BB1B53 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 47C6A148257098E00002C5E8;
+					};
 					47C6A148257098E00002C5E8 = {
 						CreatedOnToolsVersion = 12.2;
 					};
@@ -169,11 +223,19 @@
 			projectRoot = "";
 			targets = (
 				47C6A148257098E00002C5E8 /* SimpleApi-Moya */,
+				3B6BCEB9258AFDC000BB1B53 /* SimpleApi-MoyaTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3B6BCEB8258AFDC000BB1B53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		47C6A147257098E00002C5E8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -229,6 +291,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3B6BCEB6258AFDC000BB1B53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B6BCEBD258AFDC000BB1B53 /* SimpleApi_MoyaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		47C6A145257098E00002C5E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -244,6 +314,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3B6BCEC0258AFDC000BB1B53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47C6A148257098E00002C5E8 /* SimpleApi-Moya */;
+			targetProxy = 3B6BCEBF258AFDC000BB1B53 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		47C6A152257098E00002C5E8 /* Main.storyboard */ = {
@@ -265,6 +343,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3B6BCEC1258AFDC000BB1B53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "SimpleApi-MoyaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "nhnhanit.SimpleApi-MoyaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleApi-Moya.app/SimpleApi-Moya";
+			};
+			name = Debug;
+		};
+		3B6BCEC2258AFDC000BB1B53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "SimpleApi-MoyaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "nhnhanit.SimpleApi-MoyaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleApi-Moya.app/SimpleApi-Moya";
+			};
+			name = Release;
+		};
 		47C6A15B257098E20002C5E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -422,6 +538,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3B6BCEC3258AFDC000BB1B53 /* Build configuration list for PBXNativeTarget "SimpleApi-MoyaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B6BCEC1258AFDC000BB1B53 /* Debug */,
+				3B6BCEC2258AFDC000BB1B53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		47C6A144257098E00002C5E8 /* Build configuration list for PBXProject "SimpleApi-Moya" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

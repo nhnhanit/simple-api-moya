@@ -22,9 +22,22 @@ class ViewController: UIViewController {
 
     //MARK: - User Api
     @IBAction func getUsersDidTap(_ sender: Any) {
-        provider.getUsers { (users) in
-            print("usercount=", users.count)
-            print("usercount=", users[0])
+//        provider.getUsers { (users) in
+//            print("usercount=", users.count)
+//            print("usercount=", users[0])
+//        }
+        
+        let queue = DispatchQueue(label: "queue", attributes: .concurrent)
+        queue.sync {
+            for _ in 1...100 {
+                print("thread 1")
+            }
+        }
+
+        queue.async {
+            for _ in 1...100 {
+                print("thread 2")
+            }
         }
     }
     
